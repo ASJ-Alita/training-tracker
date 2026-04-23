@@ -1,3 +1,25 @@
+<div align="center">
+
+# 🏢 Training Toolkit
+
+> 用 AI 重塑企业培训全流程
+
+[![Training Toolkit](https://img.shields.io/badge/🧩-Training_Toolkit-2D9CDB?style=flat-square)](#)
+[![Tracker](https://img.shields.io/badge/📊-Effect_Tracking-9B59B6?style=flat-square)](#)
+[![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=flat-square&logo=python)](#)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](#)
+[![Lines](https://img.shields.io/badge/Code-1600+_lines-blue?style=flat-square)](#)
+
+**培训效果纵向追踪系统** — 用数据证明每一场培训的价值
+
+前后测对比、进步可视化、KPI 仪表盘、自动生成 HTML 报告，量化培训的投入产出。
+
+🧩 **产品矩阵** → [知识库问答](https://github.com/ASJ-Alita/rag-knowledge-base) · [培训需求分析](https://github.com/ASJ-Alita/training-analyzer) · [培训效果评估](https://github.com/ASJ-Alita/kirkpatrick-eval) · [智能出题](https://github.com/ASJ-Alita/quiz-generator) · [培训助手](https://github.com/ASJ-Alita/training-assistant)
+
+</div>
+
+---
+
 # 📊 培训效果追踪器
 
 > **Training Effectiveness Tracker** — 基于前后测的培训效果纵向追踪系统

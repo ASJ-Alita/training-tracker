@@ -152,6 +152,48 @@ python3 app.py
 
 ---
 
+## 🔬 系统架构
+
+```mermaid
+flowchart TB
+    subgraph 表现层["🖥️ 表现层 (app.py ~800行)"]
+        direction LR
+        A1[📊 仪表盘] --> A2[👥 学员管理]
+        A2 --> A3[📚 培训管理]
+        A3 --> A4[📝 测评记录]
+        A4 --> A5[📈 报告生成]
+    end
+
+    subgraph 业务层["⚙️ 业务逻辑层"]
+        direction TB
+        B1[data_manager.py<br/>~300行<br/>CRUD + 统计计算]
+        B2[charts.py<br/>~250行<br/>8种图表类型]
+        B3[report.py<br/>~300行<br/>HTML报告模板渲染]
+    end
+
+    subgraph 数据层["💾 数据层"]
+        direction TB
+        C1[data/students.json]
+        C2[data/trainings.json]
+        C3[data/records.json]
+        C4[config.py<br/>~80行<br/>配色/KPI/预设]
+    end
+
+    A1 & A2 & A3 & A4 --> B1
+    A5 --> B2 & B3
+    B1 --> C1 & C2 & C3
+    B1 & B2 & B3 --> C4
+
+    B3 -->|📄 输出| D[HTML 可视化报告<br/>浏览器直接打开]
+    B1 -->|📤 输出| E[CSV 数据导出<br/>Excel 兼容]
+
+    style 表现层 fill:#FFF3E0,stroke:#F39C12,stroke-width:2px
+    style 业务层 fill:#E8EAF6,stroke:#5C6BC0,stroke-width:2px
+    style 数据层 fill:#E8F5E9,stroke:#27AE60,stroke-width:2px
+```
+
+---
+
 ## 💡 面试亮点
 
 - ✅ **教学产品思维**：前后测追踪是培训行业标准方法论
